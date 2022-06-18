@@ -1,0 +1,483 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+
+
+:root {
+
+    --html: #FF5733;
+    --css: #264de4;
+    --js: #F0DB4F;
+    --php: #474A8A;
+    --git: #171515;
+    --java: #f89820;
+    --fill-size: -20%;
+    /* --fill-size-html: -60%; */
+    --fill-size-css: -10%;
+    --fill-size-js: -10%;
+    --fill-size-php: -5%;
+    --fill-size-git: 10%;
+
+
+}
+
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /* background-color: rgb(59, 71, 82); */
+    background-color: rgb(189, 196, 174);
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+img {
+    max-width: 100%;
+
+
+}
+
+.container {
+    width: min(95%, 200rem);
+    margin: 0 auto;
+    /* padding: 5rem; */
+}
+
+
+#navbar {
+    position: fixed;
+    background-color: rgb(0, 0, 0);
+    padding: 2rem;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+}
+
+li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+a:hover {
+    color: rgb(196, 199, 17);
+}
+
+#welcome-section {
+    text-align: center;
+    width: 100%;
+    height: 110vh;
+    background-color: rgb(234, 236, 217);
+    padding: 5rem;
+}
+
+#welcome-section h1 {
+    font-size: 3em;
+    color: rgb(19, 16, 16);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+
+}
+
+#welcome-section h2 {
+    font-size: 3em;
+    color: rgb(5, 3, 3);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+
+}
+
+.project-title {
+    color: #171515;
+}
+
+#m {
+    color: #171515;
+    font-size: 3rem;
+}
+
+.card {
+    background-color: rgb(0, 0, 0);
+
+    margin: 2rem;
+}
+
+.container h2 {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.container img {
+
+    height: auto;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    /* grid-gap: 2rem; */
+    /* margin: 2rem; */
+
+
+}
+
+.grid img {}
+
+.contact {
+    padding: 10rem;
+}
+
+.contact-info {
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    gap: 4rem;
+
+}
+
+.contact-info img {
+    display: block;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.contact {
+    padding-bottom: 2rem;
+}
+
+.po {
+    display: flex;
+    justify-content: center;
+}
+
+#portafolio {
+
+    display: block;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid;
+    font-size: 2rem;
+    width: 24ch;
+    padding: 0rem 0rem 0rem 1rem;
+
+}
+
+#portafolio {
+    display: block;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 27ch;
+    animation: typing 2s steps(25), blink .5s infinite step-end alternate;
+    overflow: hidden;
+    text-align: center;
+}
+
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+
+    /* from, to { border-color: transparent; } */
+    80% {
+        border-color: transparent;
+    }
+}
+
+footer {
+    background-color: rgb(0, 0, 0);
+    padding: 3rem;
+    width: 100%;
+    /* height: 50vh; */
+
+    /* z-index: 1; */
+}
+
+
+
+footer p {
+    text-align: center;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.cosa1__barras {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.progress-bar {
+    position: relative;
+    width: 200px;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 2em;
+    overflow: hidden;
+}
+
+.progress-bar::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--html);
+    /* transform: translateX(-100%); */
+    /* animation: fill-bar 0.8s 0.3s ease-in-out forwards; */
+    transform: translateX(100%);
+    animation: fill-bar 0.8s 0.3s ease-in-out forwards;
+
+}
+
+@keyframes fill-bar {
+    to {
+        transform: translate(var(--fill-size));
+    }
+
+}
+
+.progress-bar--css {
+    position: relative;
+    width: 200px;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 2em;
+    overflow: hidden;
+}
+
+.progress-bar--css::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--css);
+    transform: translateX(100%);
+    animation: fill-bar-css 0.8s 0.3s ease-in-out forwards;
+
+}
+
+
+@keyframes fill-bar-css {
+    to {
+        transform: translateX(var(--fill-size-css));
+    }
+
+}
+
+
+.progess-bar--js {
+    position: relative;
+    width: 200px;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 2em;
+    overflow: hidden;
+}
+
+.progess-bar--js::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--js);
+    transform: translateX(100%);
+    animation: fill-bar-js 0.8s 0.3s ease-in-out forwards;
+
+}
+
+@keyframes fill-bar-js {
+    to {
+        transform: translateX(var(--fill-size-js));
+    }
+
+}
+
+.progress-bar--php {
+    position: relative;
+    width: 200px;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 2em;
+    overflow: hidden;
+}
+
+.progress-bar--php::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--php);
+    transform: translateX(70%);
+    animation: fill-bar-php 0.8s 0.3s ease-in-out forwards;
+
+}
+
+@keyframes fill-bar-php {
+    to {
+        transform: translateX(var(--fill-size-php));
+    }
+
+}
+
+.progress-bar--git {
+    position: relative;
+    width: 200px;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 2em;
+    overflow: hidden;
+}
+
+.progress-bar--git::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--git);
+    transform: translateX(100%);
+    animation: fill-bar-git 0.8s 0.3s ease-in-out forwards;
+
+}
+
+@keyframes fill-bar-git {
+    to {
+        transform: translateX(var(--fill-size-git));
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 360px) {
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .barras {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: .5rem;
+    }
+}
+
+@media (min-width: 480px) {
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+
+    .barras {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+    }
+}
+
+
+
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .barras {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: .5rem;
+        padding: 1rem;
+        
+    }
+
+    
+
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+    ;
+}
+
+@media (min-width: 1280px) {
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+}
+
+.barras h2{
+    color: red;
+}
+
+.barras p{ 
+    font-size: 2rem;
+    padding: 1rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+#cosa1{
+    padding-top: 2rem;
+    color: black;
+    font-size: 2.7rem;
+    font-weight: bold;
+}
